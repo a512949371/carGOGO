@@ -1,0 +1,90 @@
+<!--pages/myinfo/myinfo.wxml-->
+<view class='myinfo-box'>
+  <view class='info flex-box' bindtap='Openinputbox' data-num='1'>
+   <view class=''>姓名</view>
+   <view class='text'>{{userdata.name}}</view>
+   <view class='icon'><image src='../../images/icon_sj@2x.png' style='width:18rpx;height:30rpx;'></image></view>
+  </view>
+  <view class='info flex-box' bindtap='Openinputbox' data-num='2'>
+   <view class=''>身份证号</view>
+   <view class='text'>{{userdata.identitycard}}</view>
+   <view class='icon'><image src='../../images/icon_sj@2x.png' style='width:18rpx;height:30rpx;'></image></view>
+  </view>
+  <view class='info flex-box' bindtap='Openinputbox' data-num='3'>
+   <view class=''>驾龄</view>
+   <view class='text'>{{userdata.drivingage}}</view>
+   <view class='icon'><image src='../../images/icon_sj@2x.png' style='width:18rpx;height:30rpx;'></image></view>
+  </view>
+  <view class='info flex-box' bindtap='Openinputbox' data-num='4'>
+   <view class=''>是否拥有驾驶跑车经验</view>
+   <view class='text'><text wx:if="{{userdata.drivingexperience==1}}">是</text><text wx:else>否</text></view>
+   <view class='icon'><image src='../../images/icon_sj@2x.png' style='width:18rpx;height:30rpx;'></image></view>
+  </view>
+  <view class='info flex-box' bindtap='Openinputbox' data-num='5'>
+   <view class=''>银行卡号</view>
+   <view class='text'></view>
+   <view class='desc' wx:if="{{userdata.banknumber == ''}}">用于接收押金退款</view>
+   <view class='desc' wx:else>已有银行卡</view>
+   <view class='icon'><image src='../../images/icon_sj@2x.png' style='width:18rpx;height:30rpx;'></image></view>
+  </view>
+  <view class='bank-tip' wx:if="{{showbanktip}}">
+   <view class='shaw'></view>
+   <view class='tip'>
+    <view class='tit'>提示</view>
+    <view class='text'>为了保证您的权益利益，请务必先输入姓名，然后再添加银行卡，银行卡持卡人必须与输入的姓名一致</view>
+    <view class='btn' bindtap='Closebanktip'>我知道了</view>
+   </view>
+  </view>
+    
+    <!--废弃的弹窗  -->
+  <view class='user-input' wx:if="{{showbox}}">
+   <view wx:if="{{num==1}}">
+    <view class='info'>
+     <input placeholder='请输入姓名' bindinput='Input'></input>
+    </view>
+   </view>
+   <view wx:if="{{num==2}}">
+    <view class='info'>
+     <input placeholder='请输入18位身份证号' bindinput='Input' type='idcard'></input>
+    </view>
+   </view>
+   <view wx:if="{{num==3}}">
+    <view class='info'>
+     <input placeholder='请输入驾龄' bindinput='Input' type='number'></input>
+    </view>
+   </view>
+   <view wx:if="{{num==4}}">
+    <view class='info flex-box'>
+    <view class=''>拥有驾驶跑车经验</view>
+    <view class='text'></view>
+    <view class='icon' bindtap='Judge' data-judge='1'>
+    <image src='../../images/icon_xk_02@2x.png' style='width:44rpx;height:44rpx;' wx:if="{{judge==1}}"></image>
+    <image src='../../images/icon_xk_01@2x.png' style='width:44rpx;height:44rpx;' wx:else></image>
+    </view>     
+    </view>
+    <view class='info flex-box'  style='border-bottom:none'>
+    <view class=''>没有驾驶跑车经验(可培训)</view>
+    <view class='text'></view>
+    <view class='icon' bindtap='Judge' data-judge='2'>
+    <image src='../../images/icon_xk_02@2x.png' style='width:44rpx;height:44rpx;'  wx:if="{{judge==2}}"></image>
+    <image src='../../images/icon_xk_01@2x.png' style='width:44rpx;height:44rpx;' wx:else></image>
+    </view>  
+    </view>
+   </view>
+   <view wx:if="{{num==5}}">
+  <view class='info flex-box' >
+   <view class='bankinfo'>持卡人</view>
+   <input placeholder='请填写持卡人姓名' bindinput='Inputbank' data-bank='1'></input>
+  </view>
+  <view class='info flex-box' >
+   <view class='bankinfo'>所属银行</view>
+   <input placeholder='请填写所属银行' bindinput='Inputbank' data-bank='2'></input>
+  </view>
+  <view class='info flex-box'>
+   <view class='bankinfo'>卡号</view>
+   <input placeholder='请填写卡号' bindinput='Inputbank' data-bank='3'></input>
+  </view>
+   </view>
+   <view class='btn' bindtap='Closeinfobox'><image src='../../images/btn_wdzl_02@2x.png' style='width:650rpx;height:100rpx;'></image></view>
+  </view>
+</view>

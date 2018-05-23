@@ -1,0 +1,30 @@
+<!--pages/myorder/maorder.wxml-->
+<view class='order-box'>
+ <view class='order order-{{item.cartype}}' wx:for="{{orderdata}}" bindtap='Opendetail' data-id='{{item.carid}}' wx:key="{{item.carid}}">
+  <view class='name flex-box'>
+   <view><text>{{item.carname}}</text></view>
+   <view><text wx-if="{{item.carstatus==1}}">正常</text><text wx-if="{{item.carstatus==2}}" class='red'>异常</text></view>
+  </view>
+  <view class='desc'>{{item.carcard}}</view>
+  <view class='desc flex-box'>
+   <view>预计</view>
+   <view wx:if="{{item.carexpect!=''}}">{{item.carexpect}}</view>
+   <view wx:else>——</view>
+  </view>
+  <view class='desc flex-box'>
+   <view>实际</view>
+   <view wx:if="{{item.caractual!=''}}">{{item.caractual}}</view>
+   <view wx:else>——</view>
+  </view>
+  <view class='desc flex-box'>
+   <view>押金</view>
+   <view wx:if="{{item.cardeposit!=''}}">{{item.cardeposit}}元</view>
+   <view wx:else>——</view>
+  </view>
+  <view class='desc flex-box' style='border:none'>
+   <view>租金</view>
+   <view wx:if="{{item.carrent!=''}}">{{item.carrent}}元</view>
+   <view wx:else>——</view>
+  </view>
+ </view>
+</view>

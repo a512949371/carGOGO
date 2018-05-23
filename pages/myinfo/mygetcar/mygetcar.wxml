@@ -1,0 +1,7 @@
+<!--pages/myinfo/myname/myname.wxml-->
+  <view class='user-input'>
+    <view class='info'>
+     <input placeholder='请输入驾龄' bindinput='Input' type='number'></input>
+   </view>
+    <view class='btn' bindtap='Closeinfobox'><image src='../../../images/btn_wdzl_02@2x.png' style='width:650rpx;height:100rpx;'></image></view>
+   </view>

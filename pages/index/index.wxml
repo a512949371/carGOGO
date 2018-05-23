@@ -1,0 +1,103 @@
+<!--index.wxml-->
+<view class="container">
+ <swiper vertical="true" animation="{{animationX}}" bindchange="Swiperchange">
+ <swiper-item  class='list-box list-{{item.cartype}}' wx:for="{{cardata}}" wx:key="{{item.carid}}">
+  <view class="top-pic {{current==1?'z-index':''}}" data-num='1' bindtap='Showtop'>
+   <image src='{{item.imgone[0]}}' mode='aspectFit' wx:if="{{current==1}}"></image>
+   <image src='{{item.imgtwo[0]}}' mode='aspectFit' wx:else></image>
+  </view>
+  <view class="right-pic2 {{current==2?'z-index':''}}" data-num='2' bindtap='Showtop'>
+    <image src='{{item.imgone[1]}}' wx:if="{{current==2}}"> </image> 
+    <image src='{{item.imgtwo[1]}}' mode='aspectFit' wx:else></image> 
+  </view>
+   <view class="right-pic1 {{current==3?'z-index':''}}" data-num='3' bindtap='Showtop'>
+   <image src='{{item.imgone[2]}}' wx:if="{{current==3}}"> </image>
+   <image src='{{item.imgtwo[2]}}' mode='aspectFit' wx:else></image>
+  </view> 
+  <view class="left-pic {{current==4?'z-index':''}}" data-num='4' bindtap='Showtop'>
+   <image src='{{item.imgone[3]}}' wx:if="{{current==4}}"> </image>
+   <image src='{{item.imgtwo[3]}}' mode='aspectFit' wx:else></image>
+  </view>
+  <view class='carinfo-box'>
+   <view class='car-name flex-box'>
+    <view class='name'><text>{{item.carname}}</text></view>
+    <view class='rule'><text>时租玩法</text></view>
+   </view>
+   <view class='desc pt20'><text>{{item.parameterone}}</text><view class='doc'></view><text>{{item.parametertwo}}</text><view class='doc'></view><text>{{item.parameterthree}}</text></view>
+   <view class='desc pt20' bindtap='Getmap'><text>取还：{{item.useadd}}</text>
+   <view class='icon-map'>
+    <image src='../../images/icon_dw@2x.png'></image>
+   </view>
+   </view>
+  </view>
+  <!-- <view class='direction' animation="{{animationData}}">
+   <image src='../../images/icon_down.png' style='width:40rpx;height:40rpx'></image>
+  </view> -->
+  <view class='footer'>
+   <view class='foot-box flex-box'>
+     <view class='left'>
+      <view class='warm' wx:if="{{isfirst==1}}">99元/小时</view>
+       <view class='ordinary' wx:else>300元/小时</view>
+     </view>
+     <view class='right' bindtap='Getcar' data-carid='{{item.carid}}'><image src='../../images/btn_01@2x.png'></image></view>
+   </view>
+  </view>
+  </swiper-item>
+ </swiper>
+  <view class='time-box' wx:if="{{showtime}}">
+  <view class='shaw' bindtap='Closetimebox'></view>
+  <view class='content'>
+  <view class='show-time flex-box'>
+  <view class='btn' bindtap='Closetimebox'>取消</view>
+  <view>当前选择：{{day}}天{{hour}}时</view>
+  <view class='btn' bindtap='Truetimebox'>确定</view>
+  </view>
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300rpx;" value="{{value}}" bindchange="Selecttime">
+    <picker-view-column>
+      <view wx:for="{{days}}" style="line-height: 50px">{{item}}天</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{hours}}" style="line-height: 50px">{{item}}时</view>
+    </picker-view-column>
+  </picker-view>
+  </view>
+</view>
+<view class='rentalcar-tip' wx:if="{{rentalcartip}}">
+ <view class='shaw'></view>
+ <view class='rentalcar'>
+  <view class='tit'>提示</view>
+  <view class='text'>您预计租用【{{setcardata.carname}}】【<text wx:if="{{day>0}}">{{day}}天</text><text>{{hour}}小时</text>】,请缴纳99元订金</view>
+  <view class='text'>您在现场缴纳现金之后，即可体验超跑之旅</view>
+  <view class='btn-box flex-box'>
+    <view class='btn' bindtap='Gowxpay'>确认</view>
+    <view class='btn border-2' bindtap='Closerentalcartip'>取消</view>
+  </view>
+ </view>
+</view>
+ <view class='userbtn' bindtap='Openuserbox'>
+ <image src='../../images/icon_grzx@2x.png' style='width:60rpx;height:70rpx'></image></view>
+ <view class='left-nav' wx:if="{{animatTF}}">
+  <view class='shaw' bindtap='Closeleftnav'></view>
+  <view class='user-box' animation="{{animationuser}}">
+   <view class='user flex-box'>
+    <view class='img'><image src='{{userpic}}' style='width:70rpx;height:70rpx;'></image></view>
+    <view>{{username}}</view>
+   </view>
+   <view class='nav flex-box' data-num='1' bindtap='Openurl'>
+    <view class='img'><image src='../../images/icon_cmcd_01@2x.png' style='width:46rpx;height:35rpx;'></image></view>
+    <view><text>我的资料</text></view>
+   </view>
+   <view class='nav flex-box' data-num='2' bindtap='Openurl'>
+    <view class='img'><image src='../../images/icon_cmcd_02@2x.png' style='width:35rpx;height:39rpx;'></image></view>
+    <view><text>我的订单</text></view>
+   </view>
+   <view class='nav flex-box' data-num='3' bindtap='Openurl'>
+    <view class='img'><image src='../../images/icon_cmcd_03@2x.png' style='width:29rpx;height:39rpx;'></image></view>
+    <view><text>我的徽章</text></view>
+   </view>
+   <view class='badge'>
+    <view>暂无徽章，开车去兜风</view>
+   </view>
+ </view>
+ </view>
+</view>

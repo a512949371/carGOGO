@@ -1,0 +1,7 @@
+<!--pages/initpage/initpage.wxml-->
+<view class='initpage'>
+ <button wx:if="{{canIUse}}" open-type='getUserInfo' bindgetuserinfo='Getinfo' class='getuser-btn'>
+ 确认登录授权
+ </button>
+ <view wx:else class='getuser-btn'>请升级微信版本</view>
+</view>

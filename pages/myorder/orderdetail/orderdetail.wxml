@@ -1,0 +1,37 @@
+<!--pages/myorder/orderdetail/orderdetail.wxml-->
+<view class='detail-box'>
+ <view class='tit flex-box'>
+  <view>订单号：</view>
+  <view>201805220123456</view>
+ </view>
+ <view class='usetime-box pt45'>已用时</view>
+ <view class='usetime pt5'>23小时23分</view>
+ <view class='desc flex-box'>
+  <view><text>预计剩余时间：</text></view>
+  <view><text>23小时23分</text></view>
+ </view>
+ <view class='desc flex-box'>
+  <view><text>租用车辆：</text></view>
+  <view><text>兰博基尼</text></view>
+ </view>
+ <view class='desc flex-box'>
+  <view><text>车牌号：</text></view>
+  <view><text>云A023KX</text></view>
+ </view>
+ <view class='desc flex-box'>
+  <view><text>开始时间：</text></view>
+  <view><text>2018/5/20 18:00</text></view>
+ </view>
+ <view class='desc flex-box'>
+  <view><text>当前金额：</text></view>
+  <view><text>1234元</text></view>
+ </view>
+ <view class='desc flex-box'>
+  <view><text>押金：</text></view>
+  <view><text>（已交）</text><text>30000元</text></view>
+ </view>
+ <view class='desc flex-box'>
+  <view><text>还车点：</text></view>
+  <view><text>23小时23分</text></view>
+ </view>
+</view>

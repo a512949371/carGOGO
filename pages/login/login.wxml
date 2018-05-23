@@ -1,0 +1,15 @@
+<!--pages/login/login.wxml-->
+<view class='login-box'>
+ <view class='login'>
+  <view class='user-box'>
+   <view class='icon-user'><image src='../../images/icon_zh@2x.png' style='width:32rpx;height:41rpx'> </image></view>
+   <input placeholder='请输入手机号' bindinput='Getphone'></input>
+   </view>
+  <view class='user-box mt10 flex-box'>
+   <view class='icon-user'><image src='../../images/icon_yzm@2x.png' style='width:32rpx;height:41rpx'></image></view>
+   <input bindinput='Getsms'></input>
+   <view class='sms' bindtap='Getcode'>{{smstext}}</view>
+  </view>
+  <view class='btn' bindtap='Login'>登录</view>
+ </view>
+</view>

@@ -1,0 +1,46 @@
+/* pages/myorder/maorder.wxss */
+.order-box{
+  width: 100%
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.order{
+  padding: 0 20rpx;
+  color: #FFF;
+  margin-bottom: 20rpx;
+}
+.name{
+  font-size: 32rpx;
+  padding-top: 10rpx;
+}
+.desc{
+  font-size: 28rpx;
+  padding: 20rpx 0;
+  border-bottom: 1px solid #808080
+}
+.red{
+  color: #F00
+}
+.order-1{
+  background: url(http://p8x2zn192.bkt.clouddn.com/image_wddd_01@2x.png) no-repeat top center;
+  background-size: cover;
+}
+.order-2{
+  background: url(http://p8x2zn192.bkt.clouddn.com/image_wddd_02@2x.png) no-repeat top center;
+  background-size: cover;
+}
+.order-3{
+  background: url(http://p8x2zn192.bkt.clouddn.com/image_wddd_03@2x.png) no-repeat top center;
+  background-size: cover;
+}
+.order-4{
+  background: url(http://p8x2zn192.bkt.clouddn.com/image_wddd_04@2x.png) no-repeat top center;
+  background-size: cover;
+}
+.order-5{
+  background: url(http://p8x2zn192.bkt.clouddn.com/image_wddd_05@2x.png) no-repeat top center;
+  background-size: cover;
+}

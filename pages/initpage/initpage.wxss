@@ -1,0 +1,26 @@
+/* pages/initpage/initpage.wxss */
+.initpage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(http://p8x2zn192.bkt.clouddn.com/bg_06.jpg) no-repeat top center;
+  background-size: cover
+}
+.getuser-btn{
+  position: absolute;
+  bottom: 100rpx;
+  margin: 0;
+  width: 310rpx;
+  height: 84rpx;
+  padding: 0;
+  left:calc(50% - 155rpx);
+  background: url(http://p8x2zn192.bkt.clouddn.com/btn_sq.png) no-repeat top center;
+  background-size: cover;
+  font-size: 32rpx;
+  line-height: 84rpx;
+  text-align: center;
+  color: #FFF;
+  font-weight: bold
+}

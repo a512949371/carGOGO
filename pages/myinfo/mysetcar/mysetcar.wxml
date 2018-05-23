@@ -1,0 +1,20 @@
+<!--pages/myinfo/myname/myname.wxml-->
+  <view class='user-input'>
+    <view class='info flex-box'>
+    <view class=''>拥有驾驶跑车经验</view>
+    <view class='text'></view>
+    <view class='icon' bindtap='Judge' data-judge='1'>
+    <image src='../../../images/icon_xk_02@2x.png' style='width:44rpx;height:44rpx;' wx:if="{{judge==1}}"></image>
+    <image src='../../../images/icon_xk_01@2x.png' style='width:44rpx;height:44rpx;' wx:else></image>
+    </view>     
+    </view>
+    <view class='info flex-box'  style='border-bottom:none'>
+    <view class=''>没有驾驶跑车经验(可培训)</view>
+    <view class='text'></view>
+    <view class='icon' bindtap='Judge' data-judge='0'>
+    <image src='../../../images/icon_xk_02@2x.png' style='width:44rpx;height:44rpx;'  wx:if="{{judge==0}}"></image>
+    <image src='../../../images/icon_xk_01@2x.png' style='width:44rpx;height:44rpx;' wx:else></image>
+    </view>  
+    </view>
+    <view class='btn' bindtap='Closeinfobox'><image src='../../../images/btn_wdzl_02@2x.png' style='width:650rpx;height:100rpx;'></image></view>
+   </view>

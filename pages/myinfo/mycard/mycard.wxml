@@ -1,0 +1,7 @@
+<!--pages/myinfo/mycard/mycard.wxml-->
+  <view class='user-input'>
+    <view class='info'>
+     <input placeholder='请输入18位身份证号' bindinput='Input' type='idcard'></input>
+   </view>
+    <view class='btn' bindtap='Closeinfobox'><image src='../../../images/btn_wdzl_02@2x.png' style='width:650rpx;height:100rpx;'></image></view>
+   </view>

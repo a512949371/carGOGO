@@ -1,0 +1,43 @@
+/* pages/myorder/orderdetail/orderdetail.wxss */
+.detail-box{
+  padding-top: 40px;
+  padding-left: 40rpx;
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.tit{
+  font-size: 32rpx;
+  padding-right: 40rpx;
+  color: #1a1a1a;
+}
+.pt5{
+  padding-top: 10rpx;
+}
+.pt25{
+  padding-top: 50rpx;
+}
+.pt45{
+  padding-top: 90rpx;
+}
+.usetime-box{
+  text-align: center;
+  font-size: 32rpx;
+  color: #1a1a1a;
+}
+.usetime{
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 60rpx;
+  padding-bottom: 50rpx;
+  border-bottom: 1px solid #e5e5e5;
+}
+.desc{
+  font-size: 32rpx;
+  color: #1a1a1a;
+  border-bottom: 1px solid #e5e5e5;
+  padding:30rpx 0; 
+  padding-right: 40rpx;
+}

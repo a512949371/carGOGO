@@ -1,0 +1,108 @@
+/* pages/myinfo/myinfo.wxss */
+.myinfo-box{
+  width: 100%;
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.myinfo-box .info{
+  padding:30rpx;
+  border-bottom: 1px solid #a3a3a3;
+  font-size: 32rpx;
+  color: #111;
+}
+.myinfo-box .text{
+  flex: 1;
+  text-align: right;
+  padding-right: 20rpx;
+}
+.myinfo-box .desc{
+  font-size: 32rpx;
+  color: #a3a3a3;
+  padding-right: 10rpx;
+}
+.icon{
+  padding-top: 4rpx;
+}
+.user-input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #FFF;
+}
+.user-input .info{
+  padding:30rpx;
+  border-bottom: 1px solid #a3a3a3;
+  font-size: 32rpx;
+  color: #111;
+}
+.user-input .info .bankinfo{
+  width: 200rpx;
+}
+.user-input .info input{
+  flex: 1;
+}
+.user-input .btn{
+  margin-top: 100rpx;
+  width: 650rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-left:auto;
+  margin-right: auto 
+}
+.bank-tip{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99
+}
+.bank-tip .shaw{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100
+}
+.bank-tip .tip{
+  position: absolute;
+  top: calc(50% - 175rpx);
+  left: calc(50% - 230rpx);
+  width: 460rpx;
+  height: 350rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #FFF;
+  border-radius: 10rpx;
+  z-index: 101
+}
+.bank-tip .tip .tit{
+  text-align: center;
+  font-size: 32rpx;
+  padding-bottom: 20rpx;
+}
+.bank-tip .tip .text{
+ font-size: 28rpx;
+ color: #666;
+ text-align: left;
+ line-height: 50rpx;
+ margin-bottom: 20rpx;
+ padding-right: 0;
+}
+.bank-tip .tip .btn{
+  width: 400rpx;
+  height: 64rpx;
+  border-radius: 64rpx;
+  background-color:rgb(254, 220, 50);
+  margin: auto;
+  text-align: center;
+  line-height: 64rpx;
+  font-size: 36rpx;
+}

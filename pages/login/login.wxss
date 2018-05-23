@@ -1,0 +1,55 @@
+/* pages/login/login.wxss */
+.login-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(http://p8x2zn192.bkt.clouddn.com/bg_landing@2x.png) no-repeat top center;
+  background-size: cover
+}
+.flex-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login{
+  position: absolute;
+  top: 40%;
+  left: 50rpx;
+  right: 50rpx;
+}
+.login .user-box{
+  padding: 24rpx 20rpx;
+  border-radius: 48rpx;
+  background-color: rgba(255, 255, 255,0.6);
+  text-align: center;
+  font-size: 28rpx;
+  position: relative
+}
+.icon-user{
+  position: absolute;
+  top: 30rpx;
+  left: 50rpx;
+}
+.mt10{
+  margin-top: 60rpx;
+}
+.sms{
+  background-color:rgb(255, 222,0);
+  padding: 12rpx 20rpx;
+  font-size: 24rpx;
+  border-radius: 24rpx;
+}
+.btn{
+  margin-top: 120rpx;
+  background-color: rgb(255, 222,0);
+  width: 650rpx;
+  text-align: center;
+  border-radius: 40rpx;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 36rpx;
+}

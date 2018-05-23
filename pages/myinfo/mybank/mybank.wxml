@@ -1,0 +1,16 @@
+<!--pages/myinfo/mybank/mybank.wxml-->
+  <view class='user-input'>
+    <view class='info flex-box' >
+   <view class='bankinfo'>持卡人</view>
+   <input placeholder='请填写持卡人姓名' disabled="true" value='{{bankname}}'></input>
+  </view>
+  <view class='info flex-box' >
+   <view class='bankinfo'>所属银行</view>
+   <input placeholder='请填写所属银行' bindinput='Inputbank' data-bank='2'></input>
+  </view>
+  <view class='info flex-box'>
+   <view class='bankinfo'>卡号</view>
+   <input placeholder='请填写卡号' bindinput='Inputbank' data-bank='3' type='number'></input>
+  </view>
+    <view class='btn' bindtap='Closeinfobox'><image src='../../../images/btn_wdzl_02@2x.png' style='width:650rpx;height:100rpx;'></image></view>
+   </view>
